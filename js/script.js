@@ -33,6 +33,19 @@ function newItem() {
     li.addClass("delete");
   }
 
+  // add event listener for Enter key :
+   
+  const textField = document.getElementById("input");
+
+textField.addEventListener("keypress", 
+(event)=>{
+  if (event.key==="Enter"){
+    event.preventDefault();
+    newItem();
+  }
+  }
+)
+
   // 4. Reordering the items:
   $("#list").sortable();
 }
